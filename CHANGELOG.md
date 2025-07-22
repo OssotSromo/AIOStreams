@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.7.0](https://github.com/Viren070/AIOStreams/compare/v2.6.1...v2.7.0) (2025-07-22)
+
+
+### Features
+
+* add proxy public url option, deprecate `FORCE_PUBLIC_PROXY_` env vars and replace with `FORCE_PROXY_PUBLIC_URL` and `DEFAULT_PROXY_PUBLIC_URL` ([feb4651](https://github.com/Viren070/AIOStreams/commit/feb465176039e3cd5d2308dd8381775b7b1704f1))
+* add RPDB redirect API with fallback support ([884b77e](https://github.com/Viren070/AIOStreams/commit/884b77ecd950962f0ee95c5540a7aeca6431bff8))
+* allow disabling groups ([dddf80a](https://github.com/Viren070/AIOStreams/commit/dddf80ae438b742e254d6c7436a2bd5a394b7337))
+* use separate cache instances per resource ([0a8e8e4](https://github.com/Viren070/AIOStreams/commit/0a8e8e4fe4ef9cbbe3a7e8a01b4c9698753cad0c))
+
+
+### Bug Fixes
+
+* add logs for parsing times and format time correctly ([a8bc9d1](https://github.com/Viren070/AIOStreams/commit/a8bc9d13a15fb83f0b45b43c21f59703ed961efa))
+* **core:** carry out deep link conversion on full meta responses too ([1d2699f](https://github.com/Viren070/AIOStreams/commit/1d2699f018fc2db4ab64bea9ef1c4908f184c0a1)), closes [#264](https://github.com/Viren070/AIOStreams/issues/264)
+* dont log errors when attempting to convert discover deep links ([f4c09c9](https://github.com/Viren070/AIOStreams/commit/f4c09c94220f46b5f9a6572cd9f21617fef4ebcf))
+* encrypt default proxy public URL in status response if provided ([78229ee](https://github.com/Viren070/AIOStreams/commit/78229eea5bf0f23979e6b42dda0ac8ee9378ea67))
+* ensure trusted is checked before validation on updateUser ([c805e49](https://github.com/Viren070/AIOStreams/commit/c805e49417b83540b9d699e1095ab5f089b02724))
+* improve german regex pattern ([1da1e9e](https://github.com/Viren070/AIOStreams/commit/1da1e9e32263f6bf8c1846552ad00528192f872e))
+* make 'end' parameter optional in slice function ([2d21435](https://github.com/Viren070/AIOStreams/commit/2d21435a45dba9fbd9d792ff490007e6a9c86d38))
+* update German regex pattern for improved language detection ([01e9a99](https://github.com/Viren070/AIOStreams/commit/01e9a9979c4cac96728200a31b78e2920b8e677b))
+
 ## [2.6.1](https://github.com/Viren070/AIOStreams/compare/v2.6.0...v2.6.1) (2025-07-16)
 
 
