@@ -3,16 +3,23 @@ import path from 'path';
 
 export class ResourceManager {
   static getResource(resourceName: string) {
-    // check existence
     const filePath = path.join(
       __dirname,
       '../../../../',
       'resources',
       resourceName
     );
+
     if (!fs.existsSync(filePath)) {
-      throw new Error(`Resource ${resourceName} not found at ${filePath}`);
+      console.warn(`Resource ${resourceName} not found at ${filePath} — returning empty object`);
+      return {}; // or return null if caller handles that better
     }
-    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+    try {
+      return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (err) {
+      console.error(`Failed to parse ${resourceName}:`, err);
+      return {}; // or throw if you want hard failure on bad JSON
+    }
   }
 }
